@@ -1,0 +1,36 @@
+/* variables */
+:root {
+    --primary-color-500: #204E4C;
+    --primary-color-600: #3B918C;
+    --primary-color-700: #2D6C69;
+    --secondary-color-500: #DBE5B1;
+    --secondary-color-400: #B8CC66;
+    --secondary-color-shadow: 0px 0px 5px 1.5px #B8CC664D;
+    --white-color: #FBFBFB;
+    --secondary-white: #F2F2F0;
+    --text-color: #4D4D4D;
+    --dark-color: #1A1A1A;
+    --error-color: #FF4B4B;
+    --border-main-color: #999999;
+    --border-main-size: 1px;
+    --radius-small: 8px;
+    --radius-large: 16px;
+    --btn-padding: 12px 40px;
+    --small-padding: 30px 15px;
+    --medium-padding: 70px 45px;
+    --large-padding: 60px 80px;
+    --transition: opacity 400ms ease-in-out;
+    --box-width: 700px;
+    --second-font: 
+}
+/* Custom dropdown styles */
+.custom-drop {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+button.custom-drop,
+a {
+    --bs-dropdown-link-active-bg: var(--secondary-color-500) !important;
+    --bs-dropdown-link-active-color: var(--dark-color);
+}

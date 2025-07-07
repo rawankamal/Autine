@@ -1,0 +1,56 @@
+ @import url(./components.css);
+@import url(./boot-edit.css); 
+@import url(./variables.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* transitions */
+html {
+    transition: opacity 400ms ease-in-out;
+}
+
+body {
+    opacity: 0;
+    animation: dissolve 500ms ease-in-out forwards;
+    background: var(--secondary-white);
+    font-family: "Nunito", serif;
+}
+
+@keyframes dissolve {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* register style */
+
+/* Header Styling */
+/* .main-header {
+    /* padding: 20px 0 !important; */
+    /* position: sticky;
+    top: 0;
+    z-index: 1000; 
+} */
+/* .mx-10 p.my-3 {
+    text-align: center;
+} */
+/* .step {
+    animation: dissolve 1000ms ease-in-out forwards;
+    opacity: 0;
+    display: none;
+}
+
+.step.active {
+    opacity: 1;
+    display: block;
+} */
+
+

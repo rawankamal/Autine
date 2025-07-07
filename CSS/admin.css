@@ -1,0 +1,8 @@
+@import url(./therapist.css);
+@import url(./classes.css);
+@import url(./components.css);
+
+article i.bi-person {
+    color: #4CAF4F;
+    background-color: #E5FED8;
+}

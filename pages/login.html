@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autine - Log In</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- toastify js -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../CSS/auth.css">
+</head>
+
+<body>
+    <nav class="navbar bg-transparent">
+        <div class="container m-4 mt-lg-3">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="logo" width="150">
+            </a>
+        </div>
+    </nav>
+
+    <!-- main content -->
+    <div class="container">
+        <!-- step "login" -->
+        <div class="main-custom-box">
+            <form class="login-form" id="loginForm">
+                <div class="step active">
+                    <div class="mx-3">
+                        <p class="header-5 py-40 fs-1 px-4">Hello Again !</p>
+                        <!-- form -->
+                        <div class="row">
+                            <!-- 1st row "email" -->
+                            <div class="col-12 mb-3">
+                                <label for="email" class="custom-label">Email</label>
+                                <input type="email" id="email" placeholder="Enter your email">
+                            </div>
+                            <!-- 2nd row "password" -->
+                            <div class="col-12 mb-3">
+                                <label for="loginPassword" class="custom-label">Password</label>
+                                <div class="position-relative custom-input">
+                                    <input type="password" id="loginPassword" placeholder="Password">
+                                    <i class="bi bi-eye" id="toggleLoginPassword"></i>
+                                </div>
+                            </div>
+                            <!-- 3rd row "forget" -->
+                            <div class="col-12 cta-plain justify-content-end">
+                                <a href="#">Forget Password ?</a>
+                            </div>
+                            <!-- 4th row "remember me" -->
+                            <div class="col-12 cta-plain justify-content-start mb-4 ps-1">
+                                <input type="checkbox" name="rememberMe" id="rememberMe" class="form-check-input me-2 m-0 border-dark ">
+                                <p class="">Remember me</p>
+                            </div>
+                            <!-- 5th row "next btn" -->
+                            <button type="submit" id="next-step-login" class="custom-btn btn-primary-500">Next</button>
+                            <!-- 6th row "sign up" -->
+                            <div class="col-12 cta-plain justify-content-center mt-3">
+                                <p class="text-center">Are you a new user ?</p>
+                                <a href="./register.html">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- step 2 "recover" -->
+                <div class="step">
+                    <div class="mx-3">
+                        <p class="header-5 py-40 fs-1 px-4">Recovering your access !</p>
+                        <p class="my-3 text-center">
+                            Enter the email address or phone number that belongs to
+                            your forgotten password
+                        </p>
+                
+                        <!-- form -->
+                        <div class="row">
+                            <!-- 1st row "email" -->
+                            <div class="col-12 my-4">
+                                <div class="col-12 ps-lg-1">
+                                    <label for="recover-email" class="custom-label">Email</label>
+                                    <input type="email" id="recover-email" placeholder="Enter your email or phone number">
+                                </div>
+                            </div>
+                            <!-- 2nd row "next btn" -->
+                            <div class="col-12 mb-4">
+                                <button type="submit" id="next-step-recover" class="custom-btn btn-primary-500 w-100">Send</button>
+                            </div>
+                            <!-- 3rd row "forget" -->
+                            <div class="col-12">
+                                <div class="col-12 cta-plain justify-content-center">
+                                    <p class="text-center">Remember your password ?</p>
+                                    <a href="#">Log in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- step 3 "verify"-->
+                <div class="step">
+                    <div class="mx-3">
+                        <div class="mb-5 text-center">
+                            <img src="../images/email.png" alt="email">
+                        </div>
+                        <div class="mt-3 mb-4">
+                            <p class="header-5 fs-1">Check your email !</p>
+                            <p class="my-3 text-center">
+                                Please check your email address for instructions to reset your password.
+                            </p>
+                        </div>
+                    </div>
+                    <button type="submit" class="custom-btn btn-outline-primary-500 w-100">Resend Email</button>
+                </div>
+                <!-- step 4 "reset password" -->
+                <div class="step">
+                    <div class="mx-3">
+                        <p class="header-5 py-40 fs-1 px-4">Reset your password</p>
+                        <!-- form -->
+                        <!-- 1st row "password" -->
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="newPassword" class="custom-label">Password</label>
+                                <span class="star-span">*</span>
+                                <div class="position-relative custom-input">
+                                    <input type="password" id="newPassword" placeholder="Password">
+                                    <i class="bi bi-eye" id="toggleNewPassword"></i>
+                                </div>
+                            </div>
+                            <!-- 2nd row "confirm password" -->
+                            <div class="col-12 mb-5">
+                                <label for="confirmNewPassword" class="custom-label">Confirm Password</label>
+                                <span class="star-span">*</span>
+                                <div class="position-relative custom-input">
+                                    <input type="password" id="confirmNewPassword" placeholder="12345678">
+                                    <i class="bi bi-eye" id="toggleConfirmNewPassword"></i>
+                                </div>
+                            </div>
+                            <!-- 4th row "reset btn & login again" -->
+                            <button type="submit" id="next-step-reset" class="custom-btn btn-primary-500 w-100 ">Reset</button>
+                            <!-- have an account -->
+                            <div class="col-12 cta-plain justify-content-center mt-3">
+                                <p class="text-center">Already have an account ?</p>
+                                <a href="#">Log in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../JS/login.js"></script>
+    <script src="../JS/api-chat.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

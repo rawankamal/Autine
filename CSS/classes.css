@@ -1,0 +1,248 @@
+@import url(./variables.css);
+.fz-20 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+}
+.fz-26 {
+    font-size: 26px;
+    line-height: 24px;
+    font-weight: 500;
+}
+.custom-text-bold {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    line-height: 22px;
+    color: var(--dark-color);
+}
+.custom-text-bold-16 {
+    font-size: 16px;
+    color: var(--dark-color);
+}
+.custom-text-bold-14 {
+    font-size: 14px;
+    color: var(--text-color);
+}
+.custom-text-gray{
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+.border-color{
+    color: var(--border-main-color);
+}
+.custom-border {
+    border: var(--border-main-size) solid var(--border-main-color);
+}
+
+
+.header-5 {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -2%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.py-40 {
+    padding: 40px 0;
+}
+
+.mx-10 {
+    margin: 0 10px;
+}
+
+.custom-label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 0;
+    padding: 0 !important;
+}
+
+
+input[type="text"], 
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select, 
+.input,
+textarea {
+    border: var(--border-main-size) solid var(--border-main-color) !important;
+    border-radius: var(--radius-small) !important;
+    padding: 12px 14px !important;
+    margin: 5px 0 !important;
+    width: 100% !important;
+}
+.custom-chat-input {
+    border: none !important;
+}
+.custom-input i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+.custom-radio {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--border-main-color);
+    border-radius: 50%;
+    position: relative;
+}
+.custom-radio-label {
+    cursor: pointer;
+    color: var(--border-main-color);
+}
+input[type="radio"]:checked+ .custom-radio-label {
+    color: var(--text-color) !important;
+}
+input[type="radio"]:checked+.custom-radio-label .custom-radio::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondary-color-400);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658c-.566-.625-.106-1.658.753-1.658h9.592c.86 0 1.319 1.033.753 1.658l-4.796 5.482a1 1 0 0 1-1.502 0z"/></svg>') !important;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+    transition: background-image 0.5s;
+}
+
+select:focus {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-caret-up-fill" viewBox="0 0 16 16"><path d="M7.247 4.86l4.796 5.482c.566.625.106 1.658-.753 1.658H2.451c-.86 0-1.319-1.033-.753-1.658L6.494 4.86a1 1 0 0 1 1.502 0z"/></svg>') !important;
+    transition: background-image 0.5s;
+}
+
+input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--border-main-color);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+input[type="text"]:focus,
+input[type="email"]:focus, 
+input[type="password"]:focus,
+input[type="checkbox"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid var(--secondary-color-400) !important;
+}
+input[type="checkbox"]:focus{
+    background-color: var(--secondary-color-400) !important;
+}
+
+
+input[type="radio"]:checked+.custom-radio-label {
+    color: var(--text-color) !important;
+    font-weight: 400;
+}
+
+
+input[type="radio"]:checked+ .custom-radio-input {
+    border: 1px solid var(--secondary-color-400) !important;
+    box-shadow: var(--secondary-color-shadow) !important;
+}
+
+.cta-plain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+}
+.cta-plain a {
+    margin-left: 5px;
+    color: var(--primary-color-600);
+    text-align: center;
+}
+
+.profile-container {
+    text-align: center;
+}
+
+.profile-container {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.upload-icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+input.custom-chat-input {
+    border: none !important;
+    background: transparent !important;
+}
+input.custom-chat-input:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+.chat-container .input {
+    padding: 0 10px !important;
+}
+
+.bg-secondary-white {
+    background-color: var(--secondary-white);
+}
+
+
+.fz-14 {
+    font-size: 14px;
+    color: var(--text-color);
+}

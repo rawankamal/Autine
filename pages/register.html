@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Autine - Sign Up</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- toastify js -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../CSS/auth.css">
+</head>
+
+<body>
+    <nav class="navbar bg-transparent">
+        <div class="container m-4 my-lg-3">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="logo" width="150">
+            </a>
+        </div>
+    </nav>
+
+    <!-- main content -->
+    <div class="container px-5">
+        <!-- step 1 -->
+        <div class="main-custom-box">
+            <form class="register-form" id="registerForm">
+                <div class="step active">
+                    <!-- progress breadcrumb -->
+                    <ul
+                        class="d-flex justify-content-lg-start justify-content-sm-center align-items-center fz-20 flex-wrap">
+                        <li class="d-flex justify-content-center align-items-strat mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-active">1</span>
+                                <p>Details</p>
+                            </div>
+                            <span class="small-hr align-self-center"></span>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-transparent">2</span>
+                                <p>Contact</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-transparent">3</span>
+                                <p>Verify</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-transparent">4</span>
+                                <p>Profile</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mx-10">
+                        <p class="header-5 py-40">Tell us about yourself !</p>
+                        <!-- form -->
+                        <div class="row">
+                            <!-- 1st row "name" -->
+                            <div class="row mb-3">
+                                <div class="col-lg-6 col-sm-12 col-md-12 ps-lg-1">
+                                    <label for="firstName" class="custom-label">First Name</label>
+                                    <span class="star-span">*</span>
+                                    <input type="text" id="firstName" placeholder="Enter your first name">
+                                </div>
+                                <div class="col-lg-6 col-sm-12 col-md-12 pe-lg-1">
+                                    <label class="custom-label" for="lastName">Last Name</label>
+                                    <span class="star-span">*</span>
+                                    <input type="text" id="lastName" placeholder="Enter your last name">
+                                </div>
+                            </div>
+                            <!-- 2nd row "DOB" -->
+                            <div class="row mb-3">
+                                <!-- day select -->
+                                <div class="col-lg-4 col-md-4 col-sm-12 ps-lg-1">
+                                    <label class="custom-label">Date of birth</label>
+                                    <span class="star-span">*</span>
+                                    <select name="day" id="dob-day" class="form-select">
+                                    </select>
+
+                                </div>
+                                <!-- month select -->
+                                <div class="col-lg-4 col-md-4 col-sm-12 px-lg-1">
+                                    <label class="custom-label"></label>
+                                    <span class="star-span"></span>
+                                    <select class="form-select" id="dob-month">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+                                <!-- year select -->
+                                <div class="col-lg-4 col-md-4 col-sm-12 pe-lg-1">
+                                    <label class="custom-label"></label>
+                                    <span class="star-span"></span>
+                                    <select class="form-select" id="dob-year">
+
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- 3rd row "gender" -->
+                            <div class="row mb-4">
+                                <div class="col-lg-6 col-sm-12 col-md-6 ps-lg-1">
+                                    <label class="custom-label">Gender</label>
+                                    <span class="star-span">*</span>
+                                    <input type="radio" id="female" name="customRadio" value="female">
+                                    <label for="female"
+                                        class="custom-radio-input input d-flex justify-content-between align-items-center custom-radio-label">
+                                        <p>Female</p>
+                                        <span class="custom-radio"></span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 col-md-6 pe-lg-1">
+                                    <label class="custom-label"></label>
+                                    <span class="star-span"></span>
+                                    <input type="radio" id="male" name="customRadio" value="male">
+                                    <label for="male"
+                                        class="custom-radio-input input d-flex justify-content-between align-items-center custom-radio-label">
+                                        <p>Male</p>
+                                        <span class="custom-radio"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 4th row "next btn" -->
+                            <div class="row mb-3">
+                                <button type="button" id="next-step-1" class="custom-btn btn-primary-500 next-step">Next</button>
+                            </div>
+                            <!-- 5th row "forget" -->
+                            <div class="row">
+                                <div class="col-12 cta-plain">
+                                    <p class="text-center">Already have an account ?</p>
+                                    <a href="../pages/login.html">Log in</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- step 2 "contact" -->
+                <div class="step">
+                    <!-- progress breadcrumb -->
+                    <ul
+                        class="d-flex justify-content-lg-start justify-content-sm-between align-items-center fz-20 flex-wrap">
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Details</p>
+                            </div>
+
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-active">2</span>
+                                <p>Contact</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-transparent">3</span>
+                                <p>Verify</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-transparent">4</span>
+                                <p>Profile</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mx-10">
+                        <p class="header-5 py-40 px-4">How can we reach you ?</p>
+                        <!-- form -->
+                        <!-- 1st row "email" -->
+                        <div class="row">
+                            <div class="col-12 ps-lg-1 mb-3">
+                                <label for="email" class="custom-label">Email</label>
+                                <span class="star-span">*</span>
+                                <input type="email" id="email" placeholder="Enter your email or your phone number">
+                            </div>
+                            <!-- 2nd row "password" -->
+                            <div class="col-12 ps-lg-1 mb-3">
+                                <label for="registerPassword" class="custom-label">Password</label>
+                                <span class="star-span">*</span>
+                                <div class="position-relative custom-input">
+                                    <input type="password" id="registerPassword" placeholder="12345678">
+                                    <i class="bi bi-eye" id="toggleRegisterPassword"></i>
+                                </div>
+                            </div>
+                            <!-- 3rd row "confirm password" -->
+                            <div class="col-12 ps-lg-1 mb-3">
+                                <label for="registerConfirmPassword" class="custom-label">Confirm Password</label>
+                                <span class="star-span">*</span>
+                                <div class="position-relative custom-input">
+                                    <input type="password" id="registerConfirmPassword" placeholder="12345678">
+                                    <i class="bi bi-eye" id="toggleRegisterConfirmPassword"></i>
+                                </div>
+                            </div>
+                            <!-- 4th row "terms" -->
+                            <div class="col-12 cta-plain justify-content-lg-start ps-1 mb-3">
+                                <input type="checkbox" name="terms" id="terms" class="form-check-input me-2 m-0 border-dark">
+                                <p class="text-center">I accept this site’s</p>
+                                <a href="#">Terms of Use and Privacy Policy.</a>
+                            </div>
+                            <!-- 5th row "next btn" -->
+                            <button id="next-step-2" class="custom-btn btn-primary-500 next-step">Next</button>
+                        
+                        </div>
+                    </div>
+                </div>
+                <!-- step 3 "verify" -->
+                <div class="step">
+                    <!-- progress breadcrumb -->
+                    <ul
+                        class="d-flex justify-content-lg-start justify-content-sm-between align-items-center fz-20 flex-wrap">
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Details</p>
+                            </div>
+
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Contact</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-active">3</span>
+                                <p>Verify</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-transparent">4</span>
+                                <p>Profile</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="my-5 text-center">
+                        <img src="../images/email.png" alt="email">
+                    </div>
+                    <div class="mx-10 mb-3">
+                        <p class="header-5">Verifying your email !</p>
+                        <p class="my-3 text-center custom-text-gray">
+                            Please check your email address for instructions to verify your email.
+                        </p>
+                    </div>
+                    <a href="#" class="custom-btn btn-outline-primary-500 w-100 next-step">Resend Email</a>
+                </div>
+                <!-- step 4 "profile" -->
+                <div class="step">
+                    <!-- progress breadcrumb -->
+                    <ul
+                        class="d-flex justify-content-lg-start justify-content-sm-between align-items-center fz-20 flex-wrap">
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Details</p>
+                            </div>
+
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Contact</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Verify</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-active">4</span>
+                                <p>Profile</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mx-10">
+                        <p class="header-5 py-40 px-4">Completing your profile !</p>
+                        <div>
+                            <!-- 1st row "profile pic" -->
+                            <div class="row mb-1">
+                                <!-- upload profile pic -->
+                                <div class="col-12 mb-4">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="profile-container">
+                                            <label for="fileInput">
+                                                <img id="profilePic" class="profile-pic" src="../images/user.png"
+                                                    alt="Profile Picture">
+                                            </label>
+                                            <input type="file" id="fileInput" class="file-input" accept="image/*">
+                                            <!-- Camera Icon -->
+                                            <label class="upload-icon" for="fileInput">
+                                                <img src="../images/add-photo-icon.png" alt="add">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2nd row "country, city" -->
+                                <!-- Country -->
+                                <div class="col-lg-6 col-12 pe-lg-1">
+                                    <label class="custom-label" for="country">Country</label>
+                                    <span class="star-span">*</span>
+                                    <select class="form-select" id="country">
+                                        <option value="eg">Egypt</option>
+                                        <option value="sa">Saudi Arabia</option>
+                                        <option value="jo">Jordan</option>
+                                        <option value="usa">USA</option>
+                                        <option value="ca">Canada</option>
+                                    </select>
+                                </div>
+                                <!-- City -->
+                                <div class="col-lg-6 col-12 ps-lg-1 mb-3">
+                                    <label class="custom-label" for="city">City</label>
+                                    <span class="star-span">*</span>
+                                    <select class="form-select" id="city">
+                                        <option value="cairo" selected>Cairo</option>
+                                    </select>
+                                </div>
+                                <!-- 3rd row "bio" -->
+                                <div class="col-12 mb-4">
+                                    <label class="custom-label" for="bio">Bio</label>
+                                    <span class="star-span">*</span>
+                                    <textarea name="bio" id="bio" rows="10" class="d-block"
+                                        placeholder="Share something about yourself."></textarea>
+                                </div>
+                            </div>
+                            <!-- 4th row "next btn" -->
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-6 col-12 mb-2 mb-lg-0">
+                                    <button type="button" class="custom-btn btn-outline-primary-500 w-100 ">Skip For Now</button>
+                                </div>
+                                <div class="col-lg-6 col-12 align-self-strech">
+                                    <button type="submit" id="next-step-4" class="custom-btn btn-primary-500 w-100 next-step">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form -->
+
+                </div>
+                <!-- step 5 "congrats" -->
+                <div class="step">
+                    <!-- progress breadcrumb -->
+                    <ul
+                        class="d-flex justify-content-lg-start justify-content-sm-between align-items-center fz-20 flex-wrap">
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Details</p>
+                            </div>
+
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Contact</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Verify</p>
+                            </div>
+                            <span class="small-hr"></span>
+                        </li>
+                        <li class="d-flex justify-content-start align-items-center mt-2">
+                            <div class="small-circle-box">
+                                <span class="small-circle small-circle-checked">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <p>Profile</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="my-5 text-center">
+                        <img src="../images/done-icon.png" alt="email">
+                    </div>
+                    <div class="mx-10 mb-3">
+                        <p class="header-5">Congratulation, <span id="username">User</span> !</p>
+                        <p class="my-3 text-center custom-text-gray">
+                            Welcome to Autine. We're excited to have you with us!
+
+                        </p>
+                    </div>
+                    <a href="./chat.html" class="custom-btn btn-primary-500 w-100">Let's Get Started</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../JS/register.js"></script>
+    <!-- <script src="../JS/main.js"></script> -->
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
