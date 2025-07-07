@@ -1,4 +1,4 @@
-# Autine # GradProject
+# Autine - GradProject
 Graduation Project Repo.
 
 # Project Idea
